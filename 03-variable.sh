@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-start=$(date+%s);
+start=$(date +%s);
 sleep 10
-end=$(date+%s);
+end=$(date +%s);
 
 echo "Script start time:$start"
 echo "Script end time:$end"
