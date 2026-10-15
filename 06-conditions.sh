@@ -3,7 +3,7 @@
 echo "enter marks of a student:"
 read marks
 
-if [$marks -lt 33] ;then
+if [$marks -lt 33]; then
 {
     echo "marks: $marks, - Fail"
 }
