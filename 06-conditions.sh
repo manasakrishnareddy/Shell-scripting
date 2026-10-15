@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 echo "enter marks of a student:"
 read marks
