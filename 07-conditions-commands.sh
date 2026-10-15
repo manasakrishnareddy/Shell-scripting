@@ -4,3 +4,4 @@ if [$user_id -ne 0]; then
     echo "please run this script with sudo access"
  else
     echo " User has root access" 
+fi
