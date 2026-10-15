@@ -19,3 +19,4 @@ else
 {
    echo "marks: $marks, - Distinction"
 }
+fi
