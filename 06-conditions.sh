@@ -7,12 +7,15 @@ if ($marks<33)
 {
     echo "marks: $marks, - Fail"
 }
-elif ($marks<50){
+elif ($marks<50)
+{
    echo "marks: $marks, - Second Class"
 }
-elif ($marks<60){
+elif ($marks<60)
+{
    echo "marks: $marks, - First Class"
 }
-else {
+else
+{
    echo "marks: $marks, - Distinction"
 }
