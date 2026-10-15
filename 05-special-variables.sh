@@ -3,6 +3,7 @@
 # Special variable
 
 echo "All aguments passed to script: $@"
+echo "All aguments passed to script as a word: $*"
 echo "No of aguments passed to script: $#"
 echo "First variable passed: $1"
 echo "Script name: $0"
