@@ -23,11 +23,12 @@ do
  if [ $? -ne 0];
  then
     echo "going to install ${package}"
+    dnf install $package -y &>> $logs_file
+    validate $? "Installing ${package}" 
  else
     echo "${package} already installed..skipping"
  fi
- dnf install $package -y &>> $logs_file
- validate $? "Installing ${package}" 
+ 
 done
 
 echo "Script executiion completed at $(date +"%F %T")" &>> $logs_file
