@@ -17,9 +17,10 @@ validate(){
         echo "${2} Success" | tee -a $logs_file
     fi
 }
+dnf list installed $package
 for package in $@ 
 do
- dnf list installed $package
+ 
  if [ $? -ne 0 ];
  then
     echo "going to install ${package}"
