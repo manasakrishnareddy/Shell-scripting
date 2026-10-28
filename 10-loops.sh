@@ -18,9 +18,7 @@ validate(){
     fi
 }
 for package in $@ do
- echo "going to install ${package}"
+ echo "going to install $(package)"
 done
-
-
 
 echo "Script executiion completed at $(date +"%F %T")" &>> $logs_file
