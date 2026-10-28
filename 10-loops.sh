@@ -17,7 +17,8 @@ validate(){
         echo "${2} Success" | tee -a $logs_file
     fi
 }
-for package in $@ do
+for package in $@ 
+do
  echo "going to install ${package}"
 done
 
