@@ -17,13 +17,13 @@ validate(){
         echo "${2} Success" | tee -a $logs_file
     fi
 }
-dnf list installed $package
+
 for package in $@ 
 do
- 
+ dnf list installed $package
  if [ $? -ne 0 ];
  then
-    echo "going to install ${package}"
+    echo "going to install ${package}" &>> $logs_file
     dnf install $package -y &>> $logs_file
     validate $? "Installing ${package}" 
  else
