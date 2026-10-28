@@ -27,7 +27,7 @@ do
     dnf install $package -y &>> $logs_file
     validate $? "Installing ${package}" 
  else
-    echo -e "${package} already installed..\e[33m skipping"
+    echo -e "${package} already installed..\e[33m skipping \e[0m"
  fi
  
 done
