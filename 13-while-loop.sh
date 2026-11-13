@@ -3,4 +3,4 @@
 while IFS= read -r line
 do
   echo "$line"
-done <02-convesrsation.sh
+done <02-conversation.sh
