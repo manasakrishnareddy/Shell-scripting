@@ -17,6 +17,7 @@ fi
 if [ ! -d "$source_dir" ]; then
 {
     echo "ERROR: Source directory does not exist."
+    exit 1
 }
 fi
 
