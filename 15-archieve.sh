@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source_dir=$1
-dest-dir=$2
+dest_dir=$2
 days=${3:-14}
 
 usage()
