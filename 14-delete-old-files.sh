@@ -17,8 +17,19 @@ fi
 if [ ! -d "$source_dir" ]; then
 {
     echo "ERROR: Source directory does not exist."
-    usage
 }
 fi
 
-# find "$source_dir" -name "*.log" -mtime +"$days" -delete
+echo "Scanning older than $days days in $source_dir"
+file-to delete=$(find "$source_dir" -name "*.log" -mtime +"$days")
+if [ -z "$file-to-delete" ]; then
+{
+    echo "No log files found older than $days days."
+    exit 0
+}
+fi
+while IFS= read -r file 
+do
+    echo "Deleting $file"
+    rm -f "$file"
+done <<< "$file-to-delete"  
